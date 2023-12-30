@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Poppins:wght@400;700&family=Roboto:ital,wght@0,400;1,700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: linear-gradient(to right, #041308, #0b3317);
+    background-repeat: no-repeat;
+    height: 100vh;
+    font-family: 'Courier New', Courier, monospace;
+}
+.container{
+    display: flex;
+    padding: 2rem;
+    height: 100vh;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.right-text{
+    flex-basis: 30%;
+    color: whitesmoke;
+    display: flex;
+    flex-flow: column wrap;
+    text-align: center;
+    justify-content: space-evenly;
+    gap: 1rem;
+}
+.galary{
+    height: 70vh;
+    flex-basis: 60%;
+    color: white;
+    display: grid;
+    gap: 5px;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: auto;
+    justify-content: center;
+    cursor: pointer;
+}
+.box{
+    background-position: top;
+    background-size: cover;
+    background-color: #222;
+    background-blend-mode: hard-light;
+}
+.box:hover{
+    background-position: center;
+    background-size: cover;
+    background-color: #777;
+    background-blend-mode: hard-light;
+    transition: all 1s ease-in-out;
+    box-shadow: 0 0 5px #888;
+}
+.row-span{
+    grid-row: span 2;
+}
+.col-span{
+    grid-column: span 2;
+}
+@media (orientation : portrait) {
+    .container{
+        flex-direction: column;
+    }
+    .right-text{
+        flex-basis: auto;
+    }
+    p{
+        display: none;
+    }
+    .galary{
+        flex-basis: 80%;
+        width: 80%;
+    }
+    .box{
+        grid-column: span 3;
+        grid-row: span 1;
+
+    }
+}
