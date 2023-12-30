@@ -6,12 +6,12 @@
     box-sizing: border-box;
 }
 body {
-    background: linear-gradient(to right, #041308, #0b3317);
     background-repeat: no-repeat;
     height: 100vh;
     font-family: 'Courier New', Courier, monospace;
 }
 .container{
+    background: linear-gradient(to right, #041308, #0b3317);
     display: flex;
     padding: 2rem;
     height: 100vh;
@@ -61,6 +61,7 @@ body {
 @media (orientation : portrait) {
     .container{
         flex-direction: column;
+        height: 200vh;
     }
     .right-text{
         flex-basis: auto;
@@ -69,8 +70,8 @@ body {
         display: none;
     }
     .galary{
-        flex-basis: 80%;
-        width: 80%;
+        flex-basis: 90%;
+        width: 90%;
     }
     .box{
         grid-column: span 3;
